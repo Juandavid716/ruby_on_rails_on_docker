@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/src/app
+    tmpfs: 
+      - /usr/src/app/tmp
+    command: 'bundle exec rails server -b 0.0.0.0'

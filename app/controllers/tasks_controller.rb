@@ -1,12 +1,6 @@
 class TasksController < ApplicationController
     def index
         @tasks = Task.all
-
-
-        render format do
-            html: @tasks
-            json: @tasks
-        end
     end
 
     #GET 
@@ -26,6 +20,11 @@ class TasksController < ApplicationController
         end
     end
 
+    def destroy
+        @task = Task.find(params[:id])
+        @task.destroy
+        redirect_to tasks_path
+    end
     private
 
     def task_params

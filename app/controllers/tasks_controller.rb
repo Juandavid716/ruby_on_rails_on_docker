@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+    skip_before_action :require_valid_user!
+    before_action :reset_session
     def index
         @tasks = Task.all
     end
@@ -8,6 +10,8 @@ class TasksController < ApplicationController
         @task = Task.new
     end
 
+    def init
+    end
     #POST to save task in DB
     def create
         @task = Task.new(task_params)

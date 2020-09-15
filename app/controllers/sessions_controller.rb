@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
  
    def new
    end
- 
+   
+   
    def create
      reset_session
      @user = User.find_by(username: session_params[:username])

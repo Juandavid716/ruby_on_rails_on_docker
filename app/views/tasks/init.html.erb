@@ -15,7 +15,7 @@
 
 <body>
     <div class="formulario">
-        <form class="contenedor">
+        <%= form_for :session, url: sessions_path, class: 'contenedor' do |f| %>
             <div class="div__input">
                 <div class="contraseña">
                     <span class="label1">Phone, email or username:</span><br>
@@ -31,7 +31,7 @@
                 <span class="contraseñaolvidada">Forgot password?</span>
             </div>
             <button type="button" id="btnlogin">Log in</button>
-        </form>
+        <% end %>
     </div>
     <div class="form_principal">
         <img src="/twitter.png"><br>

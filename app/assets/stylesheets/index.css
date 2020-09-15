@@ -1,4 +1,4 @@
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -159,4 +159,4 @@ span {
    .div__input, #btnlogin {
        width: 80%;
    }
-}
+} */

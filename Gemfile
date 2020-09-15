@@ -33,6 +33,7 @@ group :development do
   gem 'guard', '~> 2.16', '>= 2.16.2'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
+gem 'gravatar_image_tag'
 gem 'devise', '~> 4.2'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -40,7 +41,7 @@ gem 'coderay', '~> 1.1.3.rc1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bulma', '~> 0.1.0'
+gem 'bulma-rails', '~> 0.9.0'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 # Reduces boot times through caching; required in config/boot.rb

@@ -16,6 +16,7 @@ COPY Gemfile.lock ./Gemfile.lock
 
 # Intall gems
 RUN bundle install
+RUN yarn install
 
 # Copy files from my local folder
 COPY . .

@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <%= stylesheet_link_tag 'index.css' %> 
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <%= stylesheet_link_tag 'styles.css' %> 
     <%# <link
       rel="icon"
-      href="https://img.icons8.com/fluent/48/000000/twitter.png"
+      href="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Twitter_NEW.png"
     /> %>
-    <title>Twitter. It's what's happening / Twitter</title>
-  </head>
-  <body>
-    <header>
-      <form class="header">
-        <div class="login">
-          <label class="label-placeholder">Phone, email, or username</label>
-          <input
-            class="login-box"
-            type="text"
-            id="name"
-            name="name"
-            size="23"
-          />
+
+</head>
+
+<body>
+    <div class="formulario">
+        <form class="contenedor">
+            <div class="div__input">
+                <div class="contraseña">
+                    <span class="label1">Phone, email or username:</span><br>
+                    <input type="text" id="user" name="user" class="form__input"><br>
+                </div>
+            </div>
+            <div class="div__input">
+                <div class="contraseña">
+                    <span class="label1">Password:</span><br>
+                    <input type="password" id="contraseña" name="contraseña" class="form__input"><br>
+                    <!--<label for="contraseña">Forgot password?</label>-->
+                </div>
+                <span class="contraseñaolvidada">Forgot password?</span>
+            </div>
+            <button type="button" id="btnlogin">Log in</button>
+        </form>
+    </div>
+    <div class="form_principal">
+        <img src="/twitter.png"><br>
+        <div id="centraltext">
+            <span>See what's hapenning in the world right now</span><br>
         </div>
-        <div class="login pass">
-          <label class="label-placeholder">Password</label>
-          <input
-            class="login-box"
-            type="text"
-            id="pass"
-            name="pass"
-            size="23"
-          />
-          <div class="forgot-father">
-            <span id="forgot-pass">Forgot Password?</span>
-          </div>
+        <div id="secundarytext">
+            <span>Join twitter today.</span><br>
         </div>
-        <div class="button-login-ft">
-          <button id="button-login" type="button"><b>Log in</b></button>
-        </div>
-      </form>
-    </header>
-    <section class="section">
-      <form class="form-section">
-        <img id="twitter-img" src="/images/twitter-48.png" />
-        <h2 id="content-text">
-          See what's happening in <br />the world right now
-        </h2>
-        <h4 class="white">Join Twitter today.</h4>
-        <button id="button-login-signup" type="button"><b>Sign up</b></button>
-        <button id="button-login-section" type="button"><b>Log in</b></button>
-      </form>
-    </section>
-    <footer class="footer">
-      <div class="footer-child">
-        <div class="info">About</div>
-        <div class="info">Help center</div>
-        <div class="info">Terms</div>
-        <div class="info">Privacy policy</div>
-        <div class="info">Cookies</div>
-        <div class="info">Ads info</div>
-        <div class="info">Blog</div>
-        <div class="info">Status</div>
-        <div class="info">Jobs</div>
-        <div class="info">Brand</div>
-        <div class="info">Advertise</div>
-        <div class="info">Marketing</div>
-        <div class="info">Businesses</div>
-        <div class="info">Developers</div>
-        <div class="info">Directory</div>
-        <div class="info">Settings</div>
-        <div class="info">2020 Twitter, Inc.</div>
-      </div>
-    </footer>
-  </body>
+        <button class="button button2">Sign up</button><br>
+        <button class="button button1">Log in</button>
+    </div>
+    <div class="piedepagina">
+        <footer>
+            <span>About</span>
+            <span>Help Center</span>
+            <span>Terms</span>
+            <span>Privacy policy</span>
+            <span>Cookies</span>
+            <span>Ads info</span>
+            <span>Blog</span>
+            <span>Status</span>
+            <span>Jobs</span>
+            <span>Brand</span>
+            <span>Advertise</span>
+            <span>Marketing</span>
+            <span>Businesses</span>
+            <span>Developers</span>
+            <span>Directory</span>
+            <span>Settings</span>
+            <span>&copy; 2020 Twitter, Inc.</span>
+        </footer>
+    </div>
+</body>
+
 </html>
+    
+    
+    
+    
+    

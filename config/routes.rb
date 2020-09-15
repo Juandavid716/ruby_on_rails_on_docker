@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'welcome', to: 'sessions#welcome'
   get 'authorized', to: 'sessions#page_requires_login'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "tasks#index"
+  root "tasks#init"
   resources :tasks
   
 end

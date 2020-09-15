@@ -1,18 +1,30 @@
 class SessionsController < ApplicationController
-  skip_before_action :authorized, only: [:new, :create, :welcome]
-  def new
-  end
-  def login
-  end
-  def create
-     @user = User.find_by(username: params[:username])
-     if @user && @user.authenticate(params[:password])
-        sessions[:user_id] = @user.id
-        redirect_to '/welcome'
+   skip_before_action :require_valid_user!, except: [:destroy]
+ 
+   def new
+   end
+ 
+   def create
+     reset_session
+     @user = User.find_by(username: session_params[:username])
+ 
+     if @user && @user.authenticate(session_params[:password])
+       session[:user_id] = @user.id
+       flash[:success] = 'Welcome back!'
+       redirect_to root_path
      else
-        redirect_to '/login'
+       flash[:error] = 'Invalid username/password combination'
+       redirect_to login_path
      end
-  end
-  def page_requires_login
-  end
-end
+   end
+ 
+   def destroy
+     reset_session
+           redirect_to login_path
+ 
+   end
+ 
+   def session_params
+     params.require(:session).permit(:username, :password)
+   end
+ end

@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  resources :users, only: [:new, :create]
+
+  root 'dashboard#show'
+
+  #get 'sign_up', to: 'users/new'
   get 'login', to: 'sessions#new'
-  post 'login', to: 'sessions#create'
-  get 'welcome', to: 'sessions#welcome'
-  get 'authorized', to: 'sessions#page_requires_login'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "tasks#init"
-  resources :tasks
+  get 'logout', to: 'sessions#destroy'
+
+  resources :sessions, only: [:create]
+  resources :users, only: [:new, :create]
+  #resources :tasks
   
 end

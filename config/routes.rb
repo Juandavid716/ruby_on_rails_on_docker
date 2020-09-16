@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :twitters, path: 'home'
   root 'twitters#index'
 

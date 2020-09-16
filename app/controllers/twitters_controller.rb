@@ -15,7 +15,7 @@ class TwittersController < ApplicationController
 
   # GET /twitters/new
   def new
-    @twitter = Twitter.new
+    @twitter = current_user.twitters.build
   end
 
   # GET /twitters/1/edit
@@ -25,11 +25,11 @@ class TwittersController < ApplicationController
   # POST /twitters
   # POST /twitters.json
   def create
-    @twitter = Twitter.new(twitter_params)
+    @twitter =  current_user.twitters.build(twitter_params)
 
     respond_to do |format|
       if @twitter.save
-        format.html { redirect_to @twitter, notice: 'Twitter was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Twitter was successfully created.' }
         format.json { render :show, status: :created, location: @twitter }
       else
         format.html { render :new }

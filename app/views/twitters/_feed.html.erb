@@ -22,8 +22,12 @@
   			</figure>
   		</div>
   		<div class="media-content">
-  			
-				
+  			<div class="content">
+  				<strong><%= twitter.user.name %></strong><br />
+  				<small><%= twitter.user.username %></small><br/>
+  				<p><%= twitter.twitter %></p>
+  			</div>
+
   			<nav class="level">
   				<div class="level-left is-mobile">
   					<%= link_to twitter, class: "level-item" do %>

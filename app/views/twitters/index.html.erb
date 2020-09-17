@@ -1,15 +1,18 @@
-
+	<% if user_signed_in? %>
 <section class="section">
   <div class="container">
     <div class="columns">
-    	<% if user_signed_in? %>
+    
     		<%= render 'tw_profile' %>
-    	<% else %>
-       <%= render 'trends' %>
-      <% end %>
-
-       <%= render 'feed' %>
+         <%= render 'feed' %>
        <%= render 'who-to-follow' %>
+      
+     
+
+      
     </div>
   </div>
 </section>
+	<% else %>
+ <%= render 'loginprofile' %>
+  <% end %>

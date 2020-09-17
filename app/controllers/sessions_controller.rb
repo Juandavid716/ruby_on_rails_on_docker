@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
    def new
    end
    
+  
    
    def create
      reset_session
@@ -12,7 +13,7 @@ class SessionsController < ApplicationController
      if @user && @user.authenticate(session_params[:password])
        session[:user_id] = @user.id
        flash[:success] = 'Welcome back!'
-       redirect_to root_path
+       redirect_to twitters_path
      else
        flash[:error] = 'Invalid username/password combination'
        redirect_to login_path

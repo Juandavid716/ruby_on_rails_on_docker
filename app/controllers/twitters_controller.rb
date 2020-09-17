@@ -1,6 +1,6 @@
 class TwittersController < ApplicationController
   before_action :set_twitter, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:log,:index, :show]
   # GET /twitters
   # GET /twitters.json
   def index
@@ -22,6 +22,9 @@ class TwittersController < ApplicationController
   def edit
   end
 
+  def log
+  end
+
   # POST /twitters
   # POST /twitters.json
   def create
@@ -29,7 +32,7 @@ class TwittersController < ApplicationController
 
     respond_to do |format|
       if @twitter.save
-        format.html { redirect_to root_path, notice: 'Twitter was successfully created.' }
+        format.html { redirect_to twitters_path, notice: 'Twitter was successfully created.' }
         format.json { render :show, status: :created, location: @twitter }
       else
         format.html { render :new }

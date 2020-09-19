@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter</title>
     <%= stylesheet_link_tag 'index.css' %>  
-
 </head>
 
 <body>
@@ -61,6 +60,11 @@
             <span>&copy; 2020 Twitter, Inc.</span>
         </footer>
     </div>
+    <script>
+      $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+      })
+    </script>
 </body>
 
 </html>

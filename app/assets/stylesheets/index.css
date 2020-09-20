@@ -20,6 +20,10 @@ body {
     color: #8596a3;
 }
 
+.register {
+    width: 350px;
+}
+
 .contraseña {
     background-color: #192734;
     margin-bottom: 0;
@@ -158,4 +162,16 @@ span {
     #btnlogin {
         width: 80%;
     }
+}
+
+.modal-card-body {
+    width: 400px;
+    /*background-color: #15202b;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.twitter-image {
+    margin-left: auto;
+    margin-right: auto;
 }

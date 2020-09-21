@@ -10,23 +10,39 @@
 
 <body>
     <div class="formulario">
-        <form class="contenedor">
+       <div class="contenedor">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
             <div class="div__input">
                 <div class="contraseña">
-                    <span class="label1">Phone, email or username:</span><br>
-                    <input type="text" id="user" name="user" class="form__input"><br>
+                   <%= f.label :email %><br />
+                   <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form__input" %>
                 </div>
             </div>
+           
             <div class="div__input">
                 <div class="contraseña">
-                    <span class="label1">Password:</span><br>
-                    <input type="password" id="contraseña" name="contraseña" class="form__input"><br>
-                    <!--<label for="contraseña">Forgot password?</label>-->
+                    <%= f.label :password %><br />
+                    <%= f.password_field :password, autocomplete: "current-password" , class:"form__input" %>
+                   
                 </div>
-                <span class="contraseñaolvidada">Forgot password?</span>
+                
             </div>
-            <button type="button" id="btnlogin">Log in</button>
-        </form>
+           
+            
+            <% if devise_mapping.rememberable? %>
+                <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+                </div>
+            <% end %>
+
+            <div class="actions">
+                <%= f.submit "Log in", id:"btnlogin" %>
+            </div>
+            <% end %>
+            
+            </div>
     </div>
     <div class="form_principal">
         <img src="/twitter.png"><br>

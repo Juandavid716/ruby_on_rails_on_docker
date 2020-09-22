@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
         modalDlg.classList.remove('is-active');
     });
 });
+var elemento = document.getElementsByClassName("p");
+elemento.className += " has-text-grey-lighter";
+console.log(elemento.length)
 console.log('Hello from My JS')
 
 /*$("#showmodal").click(function() {

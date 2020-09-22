@@ -1,6 +1,64 @@
-<div class="column is-half">
+<head>
+<%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/icon?family=Material+Icons'	%>
+<%= stylesheet_link_tag 'feed.css' %> 
+
+</head>
+
+<div class="column is-5">
   <% if user_signed_in? %>
-	<article class="media box">
+  <nav class="panel" id="infoprofile">
+		<img src="https://i.pinimg.com/originals/0a/f6/47/0af647192fce6f0e0883dc5107cc00e8.jpg">
+		<div class="panel-block" style="border:none">
+			<article class="media">
+				<div class="media-left">
+					<figure class="image is-64x64">
+						<%= gravatar_image_tag(current_user.email, size: 68, alt: current_user.name) %>
+					</figure>
+				</div>
+				<div class="media-content">
+					<div class="content">
+						<p class=" has-text-grey-lighter">
+							<strong class=" has-text-grey-lighter"><%= current_user.name %></strong><br />
+							<small> @<%= current_user.username %></small>
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="panel-block" style="border:none;">
+			<div class="level-item has-centered-text">
+				<div>
+					<p class="has-text-grey-lighter"><i class="material-icons" style="font-size:15px;color:white">location_on</i> Barranquilla, Atlantico</p>	
+				</div>
+			</div>
+			<div class="level-item has-centered-text">
+				<div>
+				<p class="has-text-grey-lighter"><i class="material-icons" style="font-size:15px;color:white">date_range</i>Se unió en Septiembre 17, 2020</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel-block">				
+			<div class="level is-mobile">
+				
+				<div class="level-item has-centered-text">
+					<div>
+						<p class="subtitle is-6  has-text-grey-lighter">Tweets <span class="has-text-grey-lighter has-text-weight-semibold"><%= current_user.twitters.count %></p>
+					</div>
+				</div>
+				<div class="level-item has-centered-text">
+					<div>
+						<p class="subtitle is-6  has-text-grey-lighter">Following <span class="has-text-grey-lighter has-text-weight-semibold">0</span></p>
+					</div>
+				</div>
+					<div class="level-item has-centered-text">
+					<div>
+						<p class="subtitle is-6  has-text-grey-lighter">Followers <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<article class="media-box">
 		<figure class="media-left">
 			<p class="image is-64x64">
 				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
@@ -14,7 +72,7 @@
 
 
 <% @twitters.each do | twitter | %>
-  <div class="box">
+  <div class="box contenido">
   	<article class="media">
   		<div class="media-left">
   			<figure class="image is-64x64">
@@ -23,9 +81,9 @@
   		</div>
   		<div class="media-content">
   			<div class="content">
-  				<strong><%= twitter.user.name %></strong><br />
-  				<small><%= twitter.user.username %></small><br/>
-  				<p><%= twitter.twitter %></p>
+  				<strong class="has-text-grey-lighter"><%= twitter.user.name %></strong><br />
+  				<small class="has-text-grey-lighter"><%= twitter.user.username %></small><br/>
+  				<p class="has-text-grey-lighter"><%= twitter.twitter %></p>
   			</div>
         <% if user_signed_in? && current_user.id == twitter.user_id %>
   			<nav class="level">
@@ -34,7 +92,7 @@
   					  <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
   					<% end %>
   					<%= link_to edit_twitter_path(twitter), class: "level-item" do %>
-  					  <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+  					  <span class="icon"><i class="fa fa-pencil" aria-hidden="truegit "></i></span>
   					<% end %>
   					<%= link_to twitter, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?" } do %>
   							<span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>

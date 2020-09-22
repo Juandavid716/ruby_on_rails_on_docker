@@ -1,44 +1,79 @@
-<div class="column is-one-quarter">
+<head>
+<%= stylesheet_link_tag 'landingpage.css' %> 
+
+</head>
+
+<div class="column is-2">
 	<nav class="panel">
-		<p class="panel-heading">Profile</p>
-		<div class="panel-block">
-			<article class="media">
-				<div class="media-left">
-					<figure class="image is-64x64">
-						<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
-					</figure>
-				</div>
-				<div class="media-content">
-					<div class="content">
-						<p>
-							<strong><%= current_user.name %></strong><br />
-							<small><%= current_user.username %></small>
-						</p>
-					</div>
-				</div>
-			</article>
-		</div>
-		<div class="panel-block">
-			<div class="level is-mobile">
-				<div class="level-item has-centered-text">
-					<div>
-						<p class="heading">Tweets</p>
-						<p class="title is-6"><%= current_user.twitters.count %></p>
-					</div>
-				</div>
-				<div class="level-item has-centered-text">
-					<div>
-						<p class="heading">Following</p>
-						<p class="title is-6">0</p>
-					</div>
-				</div>
-					<div class="level-item has-centered-text">
-					<div>
-						<p class="heading">Followers</p>
-						<p class="title is-6">200</p>
-					</div>
+		<article class="media">
+			<div class="media-left">
+				<i class="large material-icons">home</i>
+			</div>
+			<div class="media-content">
+				<div class="content">
+					<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Inicio</p>
 				</div>
 			</div>
-		</div>
+		</article>
+		<article class="media">
+			<div class="media-left">
+			<i class="large material-icons">explore</i>
+			</div>
+			<div class="media-content">
+				<div class="content">
+				<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Explorar</p>
+				</div>
+			</div>
+		</article>
+		<article class="media">
+			<div class="media-left">
+				<i class="large material-icons">notifications</i>
+			</div>
+			<div class="media-content">
+				<div class="content">
+					<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Notificaciones</p>
+				</div>
+			</div>
+		</article>
+		<article class="media">
+			<div class="media-left">
+				<i class="large material-icons">archive</i>
+			</div>
+			<div class="media-content">
+				<div class="content">
+					<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Guardados</p>
+				</div>
+			</div>
+		</article>
+		<article class="media">
+			<div class="media-left">
+				<i class="large material-icons">list</i>
+			</div>
+			<div class="media-content">
+				<div class="content">
+				<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Listas</p>
+				</div>
+			</div>
+		</article>
+		<article class="media">
+			<div class="media-left">
+				<i class="large material-icons">person</i>
+			</div>
+			<div class="media-content">
+				<div class="content">
+					<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Perfil</p>
+				</div>
+			</div>
+		</article>
+		<article class="media">
+			<div class="media-left">
+				<i class="large material-icons">more</i>
+			</div>
+			<div class="media-content">
+				<div class="content">
+					<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Mas Opciones</p>
+				</div>
+			</div>
+		</article>
 	</nav>
 </div>

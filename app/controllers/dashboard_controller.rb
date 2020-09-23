@@ -4,5 +4,7 @@ class DashboardController < ApplicationController
   end
 
   def profile
+    @twitters = Twitter.all.order("created_at DESC")
+   
   end
 end

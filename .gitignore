@@ -17,7 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 .keep
-
+/config/local_env.yml
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep

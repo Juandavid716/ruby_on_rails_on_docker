@@ -7,57 +7,7 @@
 <div class="column is-5">
   <% if user_signed_in? %>
   <nav class="panel" id="infoprofile">
-		<img src="https://i.pinimg.com/originals/0a/f6/47/0af647192fce6f0e0883dc5107cc00e8.jpg">
-		<div class="panel-block" style="border:none">
-			<article class="media">
-				<div class="media-left">
-					<figure class="image is-64x64">
-						<%= gravatar_image_tag(current_user.email, size: 68, alt: current_user.name) %>
-					</figure>
-				</div>
-				<div class="media-content">
-					<div class="content">
-						<p class=" has-text-grey-lighter">
-							<strong class=" has-text-grey-lighter"><%= current_user.name %></strong><br />
-							<small> @<%= current_user.username %></small>
-						</p>
-					</div>
-				</div>
-			</article>
-		</div>
-		<div class="panel-block" style="border:none;">
-			<div class="level-item has-centered-text">
-				<div>
-					<p class="has-text-grey-lighter"><i class="material-icons" style="font-size:15px;color:white">location_on</i> Barranquilla, Atlantico</p>	
-				</div>
-			</div>
-			<div class="level-item has-centered-text">
-				<div>
-				<p class="has-text-grey-lighter"><i class="material-icons" style="font-size:15px;color:white">date_range</i>Se unió en Septiembre 17, 2020</p>
-				</div>
-			</div>
-		</div>
-		<div class="panel-block">				
-			<div class="level is-mobile">
-				
-				<div class="level-item has-centered-text">
-					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Tweets <span class="has-text-grey-lighter has-text-weight-semibold"><%= current_user.twitters.count %></p>
-					</div>
-				</div>
-				<div class="level-item has-centered-text">
-					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Following <span class="has-text-grey-lighter has-text-weight-semibold">0</span></p>
-					</div>
-				</div>
-					<div class="level-item has-centered-text">
-					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Followers <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+		
 	<article class="media-box">
 		<figure class="media-left">
 			<p class="image is-64x64">

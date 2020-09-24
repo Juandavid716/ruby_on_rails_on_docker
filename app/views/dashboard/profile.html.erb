@@ -140,10 +140,12 @@
 			</div>
 		</div>
 	</nav>
-<% @twitters.each do | twitter | %>
-  <div class="box contenido">
+<% @twitters.each  do | twitter | %>
+	<% if user_signed_in? && current_user.id == twitter.user_id %> 
+	<div class="box contenido">
+   	  
   	<article class="media">
-	  <% if user_signed_in? && current_user.id == twitter.user_id %>  
+	  
 	 	<div class="media-left">
   			<figure class="image is-64x64">
   				<%= gravatar_image_tag(twitter.user.email, size: 64, alt: twitter.user.name) %>
@@ -171,9 +173,11 @@
   			</nav>
         
 		  </div>
-		  <% end %>
-  	</article>
+		  
+	  </article>
+	  
   </div>
+  <% end %>
 <% end %>
 </div>
 			

@@ -28,3 +28,7 @@ body {
     border-style: solid;
     border: none;
 }
+
+.section {
+    padding-bottom: 0;
+}

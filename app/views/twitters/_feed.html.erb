@@ -1,61 +1,57 @@
 <head>
-<%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/icon?family=Material+Icons'	%>
-<%= stylesheet_link_tag 'feed.css' %> 
-
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/icon?family=Material+Icons'	%>
+  <%= stylesheet_link_tag 'feed.css' %> 
 </head>
 <body>
-<div class="column is-5 scrolling">
-  <% if user_signed_in? %>
-  <nav class="panel" id="infoprofile">
-  
-  <article class="media-box titulo">
-	  <p class="subtitle is-4 has-text-grey-lighter has-text-weight-bold">Inicio</p>
-  </article
-	<article class="media-box twittear">
-		<figure class="media-left creartweet" id="profilephoto">
-			<p class="image is-64x64">
-				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
-			</p>
-		</figure>
-		<div class="media-content creartweet">
-			 <%= render 'twitters/form' %>
-		</div>
-	</article>
-  <% end %>
-
-
-<% @twitters.each do | twitter | %>
-  <div class="box contenido">
-  	<article class="media">
-  		<div class="media-left">
-  			<figure class="image is-64x64">
-  				<%= gravatar_image_tag(twitter.user.email, size: 64, alt: twitter.user.name) %>
-  			</figure>
-  		</div>
-  		<div class="media-content">
-  			<div class="content">
-  				<strong class="has-text-grey-lighter"><%= twitter.user.name %></strong><br />
-  				<small class="has-text-grey-lighter"><%= twitter.user.username %></small><br/>
-  				<p class="has-text-grey-lighter"><%= twitter.twitter %></p>
-  			</div>
-        <% if user_signed_in? && current_user.id == twitter.user_id %>
-  			<nav class="level">
-  				<div class="level-left is-mobile">
-  					<%= link_to twitter, class: "level-item" do %>
-  					  <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-  					<% end %>
-  					<%= link_to edit_twitter_path(twitter), class: "level-item" do %>
-  					  <span class="icon"><i class="fa fa-pencil" aria-hidden="truegit "></i></span>
-  					<% end %>
-  					<%= link_to twitter, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?" } do %>
-  							<span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-  					<% end %>
-  				</div>
-  			</nav>
-        <% end %>
-  		</div>
-  	</article>
+  <div class="column is-5 scrolling">
+    <% if user_signed_in? %>
+    <nav class="panel" id="infoprofile">
+    <article class="media-box titulo">
+    <p class="subtitle is-4 has-text-grey-lighter has-text-weight-bold">Inicio</p>
+    </article
+    <article class="media-box twittear">
+      <figure class="media-left creartweet" id="profilephoto">
+        <p class="image is-64x64">
+          <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+        </p>
+      </figure>
+      <div class="media-content creartweet">
+        <%= render 'twitters/form' %>
+      </div>
+    </article>
+    <% end %>
+    <% @twitters.each do | twitter | %>
+    <div class="box contenido">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <%= gravatar_image_tag(twitter.user.email, size: 64, alt: twitter.user.name) %>
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <strong class="has-text-grey-lighter"><%= twitter.user.name %></strong><br />
+            <small class="has-text-grey-lighter"><%= twitter.user.username %></small><br/>
+            <p class="has-text-grey-lighter"><%= twitter.twitter %></p>
+          </div>
+          <% if user_signed_in? && current_user.id == twitter.user_id %>
+          <nav class="level">
+            <div class="level-left is-mobile">
+              <%= link_to twitter, class: "level-item" do %>
+              <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+              <% end %>
+              <%= link_to edit_twitter_path(twitter), class: "level-item" do %>
+              <span class="icon"><i class="fa fa-pencil" aria-hidden="truegit "></i></span>
+              <% end %>
+              <%= link_to twitter, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?" } do %>
+              <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+              <% end %>
+            </div>
+          </nav>
+          <% end %>
+        </div>
+      </article>
+    </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 </body>

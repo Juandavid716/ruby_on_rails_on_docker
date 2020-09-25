@@ -8,6 +8,19 @@
     border-color: #38444D;
 }
 
+.scrolling {
+    height: 88vh;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.body {
+    overflow-y: hidden;
+}
+
 .textarea {
     background-color: #202e3a;
     color: white;
@@ -15,6 +28,24 @@
 
 .placeholder {
     text-decoration-color: white;
+}
+
+.creartweet {
+    padding: 15px;
+}
+
+#profilephoto {
+    padding-bottom: 5px;
+}
+
+.titulo {
+    border-style: solid;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    padding: 10px;
+    border-color: #38444D;
 }
 
 .contenido {
@@ -27,7 +58,7 @@
     border-left-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 0px;
-    padding: 5px;
+    padding: 10px;
     border-color: #38444D;
 }
 

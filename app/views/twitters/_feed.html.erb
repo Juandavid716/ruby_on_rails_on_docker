@@ -3,18 +3,21 @@
 <%= stylesheet_link_tag 'feed.css' %> 
 
 </head>
-
-<div class="column is-5">
+<body>
+<div class="column is-5 scrolling">
   <% if user_signed_in? %>
   <nav class="panel" id="infoprofile">
-		
-	<article class="media-box">
-		<figure class="media-left">
+  
+  <article class="media-box titulo">
+	  <p class="subtitle is-4 has-text-grey-lighter has-text-weight-bold">Inicio</p>
+  </article
+	<article class="media-box twittear">
+		<figure class="media-left creartweet" id="profilephoto">
 			<p class="image is-64x64">
 				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
 			</p>
 		</figure>
-		<div class="media-content">
+		<div class="media-content creartweet">
 			 <%= render 'twitters/form' %>
 		</div>
 	</article>
@@ -55,3 +58,4 @@
   </div>
 <% end %>
 </div>
+</body>

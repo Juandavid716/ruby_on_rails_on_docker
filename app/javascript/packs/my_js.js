@@ -1,18 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    const btn = document.getElementById('showModal');
-    const modalDlg = document.getElementById('image-modal');
-    const imageModalCloseBtn = document.getElementById('image-modal-close');
-    btn.addEventListener('click', function() {
-        modalDlg.classList.add('is-active');
-    });
+    setTimeout(afterTwoSeconds, 2000);
 
-    imageModalCloseBtn.addEventListener('click', function() {
-        modalDlg.classList.remove('is-active');
-    });
+    function afterTwoSeconds() {
+        // run this code two seconds after executing run. 
+        var elem = document.getElementsByClassName('notification');
+        elem[0].remove();
+    }
+
 });
-var elemento = document.getElementsByClassName("p");
-elemento.className += " has-text-grey-lighter";
-console.log(elemento.length)
+
 console.log('Hello from My JS')
 
 /*$("#showmodal").click(function() {

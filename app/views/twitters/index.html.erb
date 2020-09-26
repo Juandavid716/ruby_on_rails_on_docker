@@ -1,6 +1,7 @@
 <head>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/icon?family=Material+Icons'	%>
-  <%= stylesheet_link_tag 'feed.css' %> 
+  <%= stylesheet_link_tag 'feed.css' %>
+  <%= javascript_pack_tag 'my_js'%>
 </head>
 <% if user_signed_in? %>
 <section class="section mb-0">
@@ -17,3 +18,4 @@
 	<% else %>
  <%= render 'loginprofile' %>
   <% end %>
+  <%= javascript_pack_tag 'my_js'%>

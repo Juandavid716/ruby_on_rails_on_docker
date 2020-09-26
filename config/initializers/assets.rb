@@ -11,6 +11,7 @@ Rails.application.config.assets.precompile += %w( index.css )
 Rails.application.config.assets.precompile += %w( signup.css )
 Rails.application.config.assets.precompile += %w( landingpage.css )
 Rails.application.config.assets.precompile += %w( feed.css )
+Rails.application.config.assets.precompile += %w( background.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

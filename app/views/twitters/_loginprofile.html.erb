@@ -52,8 +52,9 @@
         <div id="secundarytext">
             <span>Join twitter today.</span><br>
         </div>
-        <button class="button button2">Sign up</button><br>
-        <button class="button button1">Log in</button>
+        <%= link_to 'Sign up',new_user_registration_path , class: "button button2"%> 
+        <%= link_to 'Log in',new_user_session_path , class: "button button1"%> 
+     
     </div>
     <div class="piedepagina">
         <footer>

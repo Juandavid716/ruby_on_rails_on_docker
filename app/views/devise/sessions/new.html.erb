@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitter</title>
     <%= stylesheet_link_tag 'signup.css' %>  
-
+    <%= javascript_pack_tag 'my_js'%>
 </head>
 <body>
 <div class="section">
@@ -12,7 +12,7 @@
 
 		<div class="column is-4">
 			
-		<h2 class="title is-2 is-spaced">Create your account</h2>
+		<h2 class="title is-2 is-spaced">Log In</h2>
 
 	 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 	  	
@@ -48,4 +48,4 @@
 	</div>
 </div>
 <body>  
-  
+<%= javascript_pack_tag 'my_js'%>

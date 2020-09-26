@@ -1,0 +1,23 @@
+.media-box {
+  border-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+  padding: 5px;
+  border-color: #38444d;
+}
+
+body {
+  overflow-y: hidden;
+  background-color: #15202b;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: white;
+}
+.form-actions {
+  margin-top: 10px;
+}

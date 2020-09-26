@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Twittter</title>
+    <title>Twitter</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -36,9 +36,7 @@
 				<div class="navbar-end">
           <div class="navbar-item">
 					<div class="field is-grouped">
-						<p class="control">
-							<%= link_to 'New Tweet', twitters_path, class: "button is-info is-inverted" %>
-						</p>
+						
             <% if user_signed_in? %>
               <p class="control">
                 <%= link_to current_user.name, edit_user_registration_path, class: "button is-info" %>

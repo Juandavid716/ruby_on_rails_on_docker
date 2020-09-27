@@ -1,12 +1,14 @@
-version: '3'
+version: "3"
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - 3000:3000
     volumes:
       - ./:/usr/src/app
-    tmpfs: 
+    tmpfs:
       - /usr/src/app/tmp
-    command: 'bundle exec rails server -b 0.0.0.0'
+    command: "bundle exec rails server -b 0.0.0.0"

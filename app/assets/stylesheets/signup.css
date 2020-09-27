@@ -1,76 +1,78 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: #15202b;
-    font-family: "system-ui", sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  margin: 0;
+  background-color: #15202b;
+  font-family: "system-ui", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .div__input {
-    margin-top: 15px;
-    color: #8596a3;
+  margin-top: 15px;
+  color: #8596a3;
 }
 
 .contraseña {
-    background-color: #192734;
-    margin-bottom: 0;
+  background-color: #192734;
+  margin-bottom: 0;
 }
 
 .contenedor {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .title {
-    font-size: medium;
-    font-family: "system-ui", "sans-serif";
-    font-weight: bold;
-    color: white;
+  font-size: medium;
+  font-family: "system-ui", "sans-serif";
+  font-weight: bold;
+  color: white;
 }
 
 .form__input {
-    outline: none;
-    padding: 10px;
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: #fff;
-    border-bottom: 2px solid #fff;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 input {
-    border: none;
-    background: transparent;
-    outline: none;
-    outline: none;
-    padding: 10px;
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: #fff;
-    border-bottom: 2px solid #fff;
+  border: none;
+  background: transparent;
+  outline: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
-
+.label {
+  color: #8c8c8b;
+}
 label {
-    text-decoration-color: #fff;
+  text-decoration-color: #fff;
 }
 
 .label1 {
-    background: transparent;
+  background: transparent;
 }
 
 .formulario {
-    align-self: center;
+  align-self: center;
 }
 
 .section {
-    margin-top: auto;
-    margin-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }

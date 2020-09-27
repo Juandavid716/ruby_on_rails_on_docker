@@ -5,6 +5,17 @@
 
 <div class="column is-2">
 	<nav class="panel">
+
+		<article class="media">
+		<div class="media-content">
+			<div class="content">
+				<%= link_to root_path do %>
+    			<%= image_tag 'https://i.ibb.co/QJ72cHP/twitter-48.png', width: 32, height: 32, alt: 'twitter'%>
+				<% end %>
+			</div>
+		</div>
+		</article>
+
 		<article class="media">
 			<div class="media-left">
 				<i class="large material-icons">home</i>
@@ -15,6 +26,7 @@
 				</div>
 			</div>
 		</article>
+
 		<article class="media">
 			<div class="media-left">
 			<i class="large material-icons">explore</i>
@@ -25,6 +37,7 @@
 				</div>
 			</div>
 		</article>
+
 		<article class="media">
 			<div class="media-left">
 				<i class="large material-icons">notifications</i>
@@ -35,6 +48,7 @@
 				</div>
 			</div>
 		</article>
+
 		<article class="media">
 			<div class="media-left">
 				<i class="large material-icons">archive</i>
@@ -45,6 +59,7 @@
 				</div>
 			</div>
 		</article>
+
 		<article class="media">
 			<div class="media-left">
 				<i class="large material-icons">list</i>
@@ -55,6 +70,7 @@
 				</div>
 			</div>
 		</article>
+
 		<article class="media">
 			<div class="media-left">
 				<i class="large material-icons">person</i>
@@ -62,11 +78,10 @@
 			<div class="media-content">
 				<div class="content">
 				<%= link_to 'Perfil', profile_path, class: "subtitle is-5 has-text-grey-lighter has-text-weight-bold"%>
-				
-					<%# <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Perfil</p> %>
 				</div>
 			</div>
 		</article>
+
 		<article class="media">
 			<div class="media-left">
 				<i class="large material-icons">more</i>
@@ -77,5 +92,19 @@
 				</div>
 			</div>
 		</article>
+
+			<article class="media">
+				<div class="media-left">
+					<span class="material-icons">
+						power_settings_new
+					</span>
+				</div>
+				<div class="media-content">
+					<div class="content">
+					<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class:"subtitle is-5 has-text-grey-lighter has-text-weight-bold" %>
+					
+					</div>
+				</div>
+			</article>
 	</nav>
 </div>

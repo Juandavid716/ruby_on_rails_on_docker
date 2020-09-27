@@ -10,7 +10,19 @@
     <div class="columns is-centered">
 						
 <div class="column is-2">
+
 <nav class="panel">
+	<article class="media">
+	
+		<div class="media-content">
+			<div class="content">
+				<%= link_to root_path do %>
+    			<%= image_tag 'https://i.ibb.co/QJ72cHP/twitter-48.png', width: 32, height: 32, alt: 'twitter'%>
+				<% end %>
+			
+			</div>
+		</div>
+	</article>
 	<article class="media">
 		<div class="media-left">
 			<i class="large material-icons">home</i>
@@ -84,6 +96,19 @@
 			</div>
 		</div>
 	</article>
+	<article class="media">
+		<div class="media-left">
+			<span class="material-icons">
+				power_settings_new
+			</span>
+		</div>
+		<div class="media-content">
+			<div class="content">
+			<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class:"subtitle is-5 has-text-grey-lighter has-text-weight-bold" %>
+			
+			</div>
+		</div>
+	</article>
 </nav>
 </div>
 		
@@ -118,6 +143,7 @@
 				<div>
 				<p class="has-text-grey-lighter"><i class="material-icons" style="font-size:15px;color:white">date_range</i>Se unió en Septiembre 17, 2020</p>
 				</div>
+
 			</div>
 		</div>
 		<div class="panel-block">				
@@ -136,6 +162,9 @@
 					<div class="level-item has-centered-text">
 					<div>
 						<p class="subtitle is-6  has-text-grey-lighter">Followers <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
+					</div>
+					<div>
+						  <%= link_to "Edit Perfil", edit_user_registration_path, class: "button is-info " , style:"margin-left:10px;" %>
 					</div>
 				</div>
 			</div>
@@ -190,23 +219,25 @@
 		</article>
 	</div>
 	
-	<div class="panel-block" style="border-color: #9c9c9c">
-		<article class="media">
-			<div class="media-left">
-				<figure class="image is-32x32">
-					<img src="https://pbs.twimg.com/profile_images/1284197749030887429/7n6w-Urk_400x400.jpg">
-				</figure>
-			</div>
-			<div class="media-content">
-				<div class="content">
-					<p>
-						<strong class=" has-text-grey-lighter">Real Madrid</strong>
-						<small>@realmadrid</small>
-					</p>
+	
+		<div class="panel-block" style="border-color: #9c9c9c">
+			<article class="media">
+				<div class="media-left">
+					<figure class="image is-32x32 ">
+						<img src="https://pbs.twimg.com/profile_images/1284197749030887429/7n6w-Urk_400x400.jpg">
+						
+					</figure>
 				</div>
-			</div>
-		</article>
-	</div>
+				<div class="media-content">
+					<div class="content">
+						<p class="has-text-grey-lighter">
+							<strong class="has-text-grey-lighter">Real Madrid</strong>
+							<small>@realmadrid</small>
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
 		<div class="panel-block" style="border-color: #9c9c9c">
 		<article class="media">
 			<div class="media-left">

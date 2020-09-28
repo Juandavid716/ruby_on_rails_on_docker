@@ -4,8 +4,6 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
-config.action_mailer.default_url_options = {:host => 'books-app-api.herokuapp.com', :protocol => 'http'} #I've also tried it without ":protocol => 'http'"
-config.action_mailer.delivery_method = :smtp
 ActionMailer::Base.perform_deliveries = true
 ActionMailer::Base.smtp_settings = {
     address:'smtp.gmail.com',

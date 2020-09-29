@@ -18,34 +18,37 @@
                    <%= f.label :email %><br />
                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form__input" %>
                 </div>
+                <% if devise_mapping.rememberable? %>
+                <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+                </div>
+                <% end %>
             </div>
            
             <div class="div__input">
                 <div class="contraseña">
                     <%= f.label :password %><br />
                     <%= f.password_field :password, autocomplete: "current-password" , class:"form__input" %>
-                   
                 </div>
-                
+                <div>
+                <%= link_to 'Forgot password?',  new_user_password_path%>
+               
+                </div>
             </div>
            
             
-            <% if devise_mapping.rememberable? %>
-                <div class="field">
-                <%= f.check_box :remember_me %>
-                <%= f.label :remember_me %>
-                </div>
-            <% end %>
+            
 
             <div class="actions">
-                <%= f.submit "Log in", id:"btnlogin" %>
+                <%= f.submit "Log in", id:"btnlogin",class:"button" %>
             </div>
             <% end %>
             
             </div>
     </div>
     <div class="form_principal">
-        <%# <img src="/twitter.png"><br> %>
+        <img src="https://twitter-51c04.web.app/twitter.png" class="imagen" alt="Example">
         <div id="centraltext">
             <span>See what's hapenning in the world right now</span><br>
         </div>
@@ -77,16 +80,7 @@
             <span>&copy; 2020 Twitter, Inc.</span>
         </footer>
     </div>
-    <script>
-      $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-      })
-    </script>
 </body>
 
 </html>
-    
-    
-    
-    
     

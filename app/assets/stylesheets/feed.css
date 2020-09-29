@@ -1,77 +1,81 @@
 .media-box {
-    border-style: solid;
-    border-top-width: 1px;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 0px;
-    padding: 5px;
-    border-color: #38444D;
+  border-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+  padding: 5px;
+  border-color: #38444d;
 }
 
 .scrolling {
-    height: 88vh;
-    overflow-y: scroll;
+  height: 88vh;
+  overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }
 
 .body {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .textarea {
-    background-color: #202e3a;
-    color: white;
+  background-color: #202e3a;
+  color: white;
 }
 
 .placeholder {
-    text-decoration-color: white;
+  text-decoration-color: white;
 }
 
 .creartweet {
-    padding: 15px;
+  padding: 15px;
 }
 
 #profilephoto {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .titulo {
-    border-style: solid;
-    border-top-width: 1px;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-    padding: 10px;
-    border-color: #38444D;
+  border-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  padding: 10px;
+  border-color: #38444d;
 }
 
 .contenido {
-    padding: 5px;
-    margin: 0 !important;
-    border-radius: 0px 0px 0px 0px;
-    background-color: #15202b;
-    border-style: solid;
-    border-top-width: 1px;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 0px;
-    padding: 10px;
-    border-color: #38444D;
+  padding: 5px;
+  margin: 0 !important;
+  border-radius: 0px 0px 0px 0px;
+  background-color: #15202b;
+  border-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+  padding: 10px;
+  border-color: #38444d;
 }
 
 .perfil {
-    border: none;
-    border-color: transparent;
+  border: none;
+  border-color: transparent;
 }
 
 #infoprofile {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #38444D;
-    border-radius: 0px 0px 0px 0px;
-    margin: 0 !important;
-    border-bottom-width: 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #38444d;
+  border-radius: 0px 0px 0px 0px;
+  margin: 0 !important;
+  border-bottom-width: 0px;
+}
+
+#delete {
+  color: #cb4335 !important;
 }

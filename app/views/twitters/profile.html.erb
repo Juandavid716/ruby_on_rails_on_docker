@@ -1,171 +1,243 @@
 <head>
-  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/icon?family=Material+Icons'	%>
-  <%= stylesheet_link_tag 'landingpage.css' %> 
-  <%= stylesheet_link_tag 'feed.css' %> 
+<%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/icon?family=Material+Icons'	%>
+<%= stylesheet_link_tag 'feed.css' %> 
+<%= stylesheet_link_tag 'landingpage.css' %> 
 </head>
 
 
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+						
+<div class="column is-2">
 
-<% if user_signed_in? %>
-  <section class="section">
-    <div class="container">
-      <div class="columns is-centered">
-     
-        <div class="column is-2">
-        <nav class="panel">
-          <article class="media">
-            <div class="media-left">
-              <i class="large material-icons">home</i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Inicio</p>
-              </div>
-            </div>
-          </article>
-          <article class="media">
-            <div class="media-left">
-            <i class="large material-icons">explore</i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-              <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Explorar</p>
-              </div>
-            </div>
-          </article>
-          <article class="media">
-            <div class="media-left">
-              <i class="large material-icons">notifications</i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Notificaciones</p>
-              </div>
-            </div>
-          </article>
-          <article class="media">
-            <div class="media-left">
-              <i class="large material-icons">archive</i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Guardados</p>
-              </div>
-            </div>
-          </article>
-          <article class="media">
-            <div class="media-left">
-              <i class="large material-icons">list</i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-              <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Listas</p>
-              </div>
-            </div>
-          </article>
-          <article class="media">
-            <div class="media-left">
-              <i class="large material-icons">person</i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-              <%= link_to 'profile', twitter_profile, class: "subtitle is-5 has-text-grey-lighter has-text-weight-bold"%>
-              
-                <%# <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Perfil</p> %>
-              </div>
-            </div>
-          </article>
-          <article class="media">
-            <div class="media-left">
-              <i class="large material-icons">more</i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Mas Opciones</p>
-              </div>
-            </div>
-          </article>
-        </nav>
-      </div>    
-             
-      
+<nav class="panel">
+	<article class="media">
+	
+		<div class="media-content">
+			<div class="content">
+				<%= link_to root_path do %>
+    			<%= image_tag 'https://i.ibb.co/QJ72cHP/twitter-48.png', width: 32, height: 32, alt: 'twitter'%>
+				<% end %>
+			
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+			<i class="large material-icons">home</i>
+		</div>
+		<div class="media-content">
+			<div class="content">
+				<%= link_to 'Inicio', root_path, class: "subtitle is-5 has-text-grey-lighter has-text-weight-bold"%>
+			
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+		<i class="large material-icons">explore</i>
+		</div>
+		<div class="media-content">
+			<div class="content">
+			<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Explorar</p>
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+			<i class="large material-icons">notifications</i>
+		</div>
+		<div class="media-content">
+			<div class="content">
+				<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Notificaciones</p>
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+			<i class="large material-icons">archive</i>
+		</div>
+		<div class="media-content">
+			<div class="content">
+				<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Guardados</p>
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+			<i class="large material-icons">list</i>
+		</div>
+		<div class="media-content">
+			<div class="content">
+			<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Listas</p>
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+			<i class="large material-icons">person</i>
+		</div>
+		<div class="media-content">
+			<div class="content">
+			<%= link_to 'Perfil', profile_path, class: "subtitle is-5 has-text-grey-lighter has-text-weight-bold"%>
+			
+				<%# <p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Perfil</p> %>
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+			<i class="large material-icons">more</i>
+		</div>
+		<div class="media-content">
+			<div class="content">
+				<p class="subtitle is-5 has-text-grey-lighter has-text-weight-bold">Mas Opciones</p>
+			</div>
+		</div>
+	</article>
+	<article class="media">
+		<div class="media-left">
+			<span class="material-icons">
+				power_settings_new
+			</span>
+		</div>
+		<div class="media-content">
+			<div class="content">
+			<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class:"subtitle is-5 has-text-grey-lighter has-text-weight-bold" %>
+			
+			</div>
+		</div>
+	</article>
+</nav>
+</div>
+		
 
-
-      </head>
-
-      <div class="column is-5">
+<div class="column is-5 scrolling">
+<nav class="panel" id="infoprofile">
+		<img src="https://i.pinimg.com/originals/0a/f6/47/0af647192fce6f0e0883dc5107cc00e8.jpg">
+		<div class="panel-block" style="border:none">
+			<article class="media">
+				<div class="media-left">
+					<figure class="image is-64x64">
+						<%= gravatar_image_tag(current_user.email, size: 68, alt: current_user.name) %>
+					</figure>
+				</div>
+				<div class="media-content">
+					<div class="content">
+						<p class=" has-text-grey-lighter">
+							<strong class=" has-text-grey-lighter"><%= current_user.name %></strong><br />
+							<small> @<%= current_user.username %></small>
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="panel-block" style="border:none;">
+			<div class="level-item has-centered-text">
+				<div class"location-icon">
+					<p class="has-text-grey-lighter"><i class="material-icons">location_on</i> Barranquilla, Atlantico</p>	
+				</div>
+			</div>
+			<div class="level-item has-centered-text">
+				<div>
+				<p class="has-text-grey-lighter"><i class="material-icons">date_range</i>Se unió en Septiembre 17, 2020</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel-block">				
+			<div class="level is-mobile">
+				
+				<div class="level-item has-centered-text">
+					<div>
+						<p class="subtitle is-6  has-text-grey-lighter">Tweets <span class="has-text-grey-lighter has-text-weight-semibold"><%= current_user.twitters.count %></p>
+					</div>
+				</div>
+				<div class="level-item has-centered-text">
+					<div>
+						<p class="subtitle is-6  has-text-grey-lighter">Following <span class="has-text-grey-lighter has-text-weight-semibold">0</span></p>
+					</div>
+				</div>
+					<div class="level-item has-centered-text">
+					<div>
+						<p class="subtitle is-6  has-text-grey-lighter">Followers <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
+					</div>
+					<div>
+						  <%= link_to "Edit Perfil", edit_user_registration_path, class: "button is-info is-rounded edit-profile"%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+<% @twitters.each  do | twitter | %>
+	<% if user_signed_in? && current_user.id == twitter.user_id %> 
+	<div class="box contenido">
+   	  
+  	<article class="media">
+	  
+	 	<div class="media-left">
+  			<figure class="image is-64x64">
+  				<%= gravatar_image_tag(twitter.user.email, size: 64, alt: twitter.user.name) %>
+  			</figure>
+  		</div>
+  		<div class="media-content">
+  			<div class="content">
+  				<strong class="has-text-grey-lighter"><%= twitter.user.name %></strong><br />
+  				<small class="has-text-grey-lighter"><%= twitter.user.username %></small><br/>
+  				<p class="has-text-grey-lighter"><%= twitter.twitter %></p>
+  			</div>
         
-      
-      
-      <% @twitters.each do | twitter | %>
-        <div class="box contenido">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <%= gravatar_image_tag(twitter.user.email, size: 64, alt: twitter.user.name) %>
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <strong class="has-text-grey-lighter"><%= twitter.user.name %></strong><br />
-                <small class="has-text-grey-lighter"><%= twitter.user.username %></small><br/>
-                <p class="has-text-grey-lighter"><%= twitter.twitter %></p>
-              </div>
-              <% if user_signed_in? && current_user.id == twitter.user_id %>
-              <nav class="level">
-                <div class="level-left is-mobile">
-                  <%= link_to twitter, class: "level-item" do %>
-                    <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-                  <% end %>
-                  <%= link_to edit_twitter_path(twitter), class: "level-item" do %>
-                    <span class="icon"><i class="fa fa-pencil" aria-hidden="truegit "></i></span>
-                  <% end %>
-                  <%= link_to twitter, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?" } do %>
-                      <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                  <% end %>
-                </div>
-              </nav>
-              <% end %>
-            </div>
-          </article>
-        </div>
-      <% end %>
-    </div>
-
-
-
-
-
-
-
-
-
-      <div class="column is-3">
+  			<nav class="level">
+  				<div class="level-left is-mobile">
+  					<%= link_to twitter, class: "level-item" do %>
+  					  <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+  					<% end %>
+  					<%= link_to edit_twitter_path(twitter), class: "level-item" do %>
+  					  <span class="icon"><i class="fa fa-pencil" aria-hidden="truegit "></i></span>
+  					<% end %>
+  					<%= link_to twitter, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?" } do %>
+  							<span class="icon"><i class="fa faf" aria-hidden="true"></i></span>
+  					<% end %>
+  				</div>
+  			</nav>
+        
+		  </div>
+		  
+	  </article>
+	  
+  </div>
+  <% end %>
+<% end %>
+</div>
+			
+<div class="column is-3">
 	<nav class="panel derecha">
-	<div class="panel-block" style="border-color: #9c9c9c">
+	<div class="panel-block right-panel">
 		<article class="media">
 			<p class="subtitle is-4 has-text-grey-lighter has-text-weight-bold">Who to follow</p>
 		</article>
 	</div>
 	
-	<div class="panel-block" style="border-color: #9c9c9c">
-		<article class="media">
-			<div class="media-left">
-				<figure class="image is-32x32">
-					<img src="https://pbs.twimg.com/profile_images/1284197749030887429/7n6w-Urk_400x400.jpg">
-				</figure>
-			</div>
-			<div class="media-content">
-				<div class="content">
-					<p class="has-text-grey-lighter">
-						<strong class=" has-text-grey-lighter" >Real Madrid</strong>
-						<small>@realmadrid</small>
-					</p>
+	
+		<div class="panel-block right-panel">
+			<article class="media">
+				<div class="media-left">
+					<figure class="image is-32x32 ">
+						<img src="https://pbs.twimg.com/profile_images/1284197749030887429/7n6w-Urk_400x400.jpg">
+						
+					</figure>
 				</div>
-			</div>
-		</article>
-	</div>
-		<div class="panel-block" style="border-color: #9c9c9c">
+				<div class="media-content">
+					<div class="content">
+						<p class="has-text-grey-lighter">
+							<strong class="has-text-grey-lighter">Real Madrid</strong>
+							<small>@realmadrid</small>
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="panel-block right-panel">
 		<article class="media">
 			<div class="media-left">
 				<figure class="image is-32x32 ">
@@ -201,12 +273,13 @@
 		</article>
 	</div>
 	</nav>
+</div>
 
 
-
-      </div>
     </div>
-  </section>
+  </div>
+</section>
+	
 <% else %>
   <%= render 'loginprofile' %>
 <% end %>

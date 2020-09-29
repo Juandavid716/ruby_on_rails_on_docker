@@ -1,55 +1,53 @@
-# Assignment-02
+# Twitter Clon
+Una clonación de la red social Twitter empleando Ruby on Rails.
 
-### FECHA DE ENTREGA:
+# Enlace
+https://books-app-api.herokuapp.com/
 
-30 de Septiembre 2020
+# Funcionalidades
+* Creación de usuario
+* Inicio de sesión
+* Validacion de Contraseña
+* Creación y eliminación de Tweets.
+* Edición del perfil.
+* Confirmación del email.
+* Cambio de contraseña por email.
+* Validación de caracteres.
+* Perfil del usuario
 
-### VALOR:
 
-20%
 
-### MODALIDAD DE ELABORACIÓN:
+# Gemas empleadas
+* <a href="https://rubygems.org/gems/simple_form">  Simple Form: </a> Para realizar formularios de una forma sencilla.
+* <a href="https://rubygems.org/gems/devise"> Devise: </a> Manejo de usuarios y autenticación. 
+* <a href="https://rubygems.org/gems/gravatar_image_tag"> Gravatar_image_tag: </a> Para mostrar la foto a aquellos que se encuentren registrados en <a href="http://en.gravatar.com/ " > gravatar </a> 
+* <a href="https://rubygems.org/gems/pg"> Postgresql:</a> Para el manejo de Postgress
+* <a href="https://rubygems.org/gems/bulma" >  Bulma: </a> Para el manejo de CSS.
+ 
+# Referencias
+Las explicaciones de la clase de Back-End , el analisis propio y los siguientes enlaces constituyen la fuente de referencia sobre el cual este proyecto se encuentra fundamentado y que hicieron posible la realización de dicha entrega.
 
-Grupal. Maximo 2 Integrantes.
+> Para el manejo de devise y confirmación de emails.
+* <a href= "https://www.youtube.com/watch?v=5gUysPm64a4"> Twitter Clon with Ruby on Rails </a>
 
-### REQUERIMIENTO DE LA ENTREGA:
+* <a href= "https://github.com/heartcombo/devise" > Devise documentation </a> 
+* <a href="https://stackoverflow.com/questions/8186584/how-do-i-set-up-email-confirmation-with-devise" > Set up email confirmation with devise - Stack Overflow </a>
 
-Aplicando los conocimientos de Rail svistos en clases, implementa las siguientes funcionalidades de Twitter-Like-App
+> Para el manejo de rutas
+* <a href="https://guides.rubyonrails.org/routing.html"> Rails Routing </a>
 
-- Página inicial (Assignment 01)
-- Iniciar session
-- Cerrar session
-- Crear una cuenta
-- Confirmar email
-- Recuperar contraseña
-- Validación de Correo
-- Crear Tweet
-- Limitar tweet con 280 caracteres
-- Borrar un Tweet
-- Listar todos mis tweets creados
-- La aplicación debe estar corriendo en una instancia en Heroku. Adjuntar el link de la aplicación de heroku en las notas del Pull Request.
+> Para la instalacion de gemas
+* <a href ="https://rubygems.org/"> Ruby Gems </a>
 
-#### Bonus Point
+# Solución de errores
+Durante la entrega se presentaron una serie de errores y entre los más destacados se encuentran los siguientes, junto a sus respectivas soluciones:
+* <a href="https://stackoverflow.com/questions/39294859/require-tree-argument-must-be-a-directory-in-a-rails-5-upgraded-app"> require tree argument must be a directory </a>
+* <a href="https://stackoverflow.com/questions/21969549/rails-application-css-asset-not-found-in-production-mode"> rails application css asset not found in production mode </a>
+* <a href="https://stackoverflow.com/questions/45336844/error-when-run-migrations-on-heroku-postgresql-with-rails-5"> error when run migrations on heroku postgresql with rails 5 </a>
 
-- Photo de perfil del usuario
-- Información de la cuenta del usuario
-- Contar caracteres
-- 2FA
 
-### MODO DE ENTREGA:
 
-- Enviar el entregable en el repositorio generado `assignment-02-NombreDelGrupo`
 
-- Debe contener commits de la autoria de ambos estudiantes miebros del equipo.
-
-- Los estudiantes deben verificar la hora de cierre de la entrega en la plataforma para evitar inconvenientes.
-
-- Para esta entrega es válido usar librerias/framewors como ReactJS, VueJS, AngularJS, Bootstrap, Foundation o similares. OJO: No es necesario
-
-- Si tienen alguna duda, pueden escribirme al email.
-
-- Para inspiración de como hacer un TwitterLikeAapp, pueden inspirarse en https://twitter.com/
-
----
-
-No se tolerará el plagio o la copia comprobada. Sin excepción, en caso de darse este caso, a los estudiantes envueltos se les iniciará proceso de investigación, y perderán automáticamente la asignatura en caso de comprobarse tal caso. El plagio incluye usar contenidos sin la debida referencia, de manera literal o con mínimos cambios que no alteren el espíritu del texto.
+# Deployment
+El deployment se realizo en <a href="heroku" > Heroku </a> con ayuda del siguiente enlace:
+<a href ="https://devcenter.heroku.com/articles/build-docker-images-heroku-yml" > Build docker images heroku </a> 

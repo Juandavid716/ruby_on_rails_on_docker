@@ -156,12 +156,12 @@
 				</div>
 				<div class="level-item has-centered-text">
 					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Following <span class="has-text-grey-lighter has-text-weight-semibold">0</span></p>
+						<p class="subtitle is-6  has-text-grey-lighter">Siguiendo <span class="has-text-grey-lighter has-text-weight-semibold">0</span></p>
 					</div>
 				</div>
 					<div class="level-item has-centered-text">
 					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Followers <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
+						<p class="subtitle is-6  has-text-grey-lighter">Seguidores <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
 					</div>
 					<div>
 						  <%= link_to "Edit Perfil", edit_user_registration_path, class: "button is-info " , style:"margin-left:10px;" %>
@@ -193,9 +193,7 @@
   					<%= link_to twitter, class: "level-item" do %>
   					  <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
   					<% end %>
-  					<%= link_to edit_twitter_path(twitter), class: "level-item" do %>
-  					  <span class="icon"><i class="fa fa-pencil" aria-hidden="truegit "></i></span>
-  					<% end %>
+  					
   					<%= link_to twitter, method: :delete, data: { confirm: "Are you sure you want to delete this tweet?" } do %>
   							<span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
   					<% end %>

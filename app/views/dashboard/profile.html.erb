@@ -141,7 +141,7 @@
 			</div>
 			<div class="level-item has-centered-text">
 				<div>
-				<p class="has-text-grey-lighter"><i class="material-icons" style="font-size:15px;color:white">date_range</i>Se unió en Septiembre 17, 2020</p>
+				<p class="has-text-grey-lighter"><i class="material-icons" style="font-size:15px;color:white">date_range</i> Se unió en <%= current_user.created_at.strftime("Septiembre %d, %Y") %></p>
 				</div>
 
 			</div>
@@ -156,7 +156,7 @@
 				</div>
 				<div class="level-item has-centered-text">
 					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Siguiendo <span class="has-text-grey-lighter has-text-weight-semibold">0</span></p>
+						<p class="subtitle is-6  has-text-grey-lighter">Siguiendo <span class="has-text-grey-lighter has-text-weight-semibold"></span>0</p>
 					</div>
 				</div>
 					<div class="level-item has-centered-text">

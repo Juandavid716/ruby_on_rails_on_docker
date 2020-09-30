@@ -1,0 +1,65 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+en:
+  devise:
+    confirmations:
+      confirmed: "Tu email ha sido confirmado exitosamente."
+      send_instructions: ""
+      send_paranoid_instructions: "Recibirás un correo electrónico para validar tu dirección de correo electrónico en unos minutos."
+    failure:
+      already_authenticated: "Ya te encuentras logueado."
+      inactive: "Tu cuenta no se encuentra aún activa."
+      invalid: "%{authentication_keys} o contraseña inválido."
+      locked: "Tu cuenta está bloqueada."
+      last_attempt: "Tienes un intento más antes de que tu cuenta sea bloqueada."
+      not_found_in_database: " %{authentication_keys} o contraseña inválido."
+      timeout: "Tu sesión ha expirado. Por favor inicia sesión de nuevo para poder continuar."
+      unauthenticated: "Necesitas iniciar sesión o registrarte para poder continuar."
+      unconfirmed: "Necesitas confirmar tu correo electrónico para poder continuar."
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email Changed"
+      password_change:
+        subject: "Password Changed"
+    omniauth_callbacks:
+      failure: 'Could not authenticate you from %{kind} because "%{reason}".'
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "Recibiras un correo para restablecer tu contraseña en pocos minutos."
+      send_paranoid_instructions: "Si tu correo ya existe en la base de datos , recibiras un correo para recuperar tu contraseña en un par de minutos ."
+      updated: "Tu contraseña ha sido cambiada con éxito, ya estás logueado."
+      updated_not_active: "Tu contraseña ha sido cambiada con éxito."
+    registrations:
+      destroyed: "Adios! Tu cuenta fue cancelada. Te esperamos ver pronto."
+      signed_up: "Bienvenido! Te has registrado con éxito."
+      signed_up_but_inactive: "Te has registrado con éxito. Sin embargo, no puedes iniciar sesión porque no has confirmado tu correo."
+      signed_up_but_locked: "Te has registrado con éxito. Sin embargo, no puedes iniciar sesión porque tu cuenta está bloqueada."
+      signed_up_but_unconfirmed: " Un mensaje con un link de confirmacion ha sido enviado a tu correo. Por favor sigue las instrucciones para poder activar tu cuenta."
+      update_needs_confirmation: "Tu cuenta ha sido actualizada con éxito, pero primero necesitas iniciar sesión. Revisa tu correo y  sigue las instrucciones para poder activar tu cuenta."
+      updated: "Tu cuenta ha sido actualizada con éxito."
+      updated_but_not_signed_in: "Tu cuenta ha sido actualizada, pero al haber cambiado tu contraseña, necesitas iniciar sesión nuevamente"
+    sessions:
+      signed_in: "Inicio de sesión exitoso."
+      signed_out: "Cierre de sesión exitoso."
+      already_signed_out: "Cierre de sesión exitoso."
+    unlocks:
+      send_instructions: "Recibirás un correo electrónico para validar tu dirección de correo electrónico en unos minutos."
+      send_paranoid_instructions: "Si tu cuenta existe, recibirás un correo electrónico para validar tu dirección de correo electrónico en unos minutos."
+      unlocked: "Tu cuenta ha sido bloqueada, por favor inicia sesión para poder continuar."
+  errors:
+    messages:
+      already_confirmed: Ya fue confirmado, por favor inicia sesión de nuevo"
+      confirmation_period_expired: "necesitas confirmar dentro de %{period}, solicita uno nuevo"
+      expired: "ha expirado, solicita uno nuevo"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"

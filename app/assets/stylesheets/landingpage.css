@@ -1,0 +1,51 @@
+body {
+  background-color: #15202b;
+  font-family: "system-ui", sans-serif;
+  height: 100vh;
+}
+
+.panel-block {
+  background-color: #202e3a;
+}
+
+.izquierda {
+  background-color: #15202b;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.material-icons {
+  color: white;
+}
+
+.derecha {
+  border-style: outset;
+  border-width: 2px;
+  border-color: #38444d;
+}
+
+.border-section-right {
+  border-style: solid;
+  border: none;
+}
+
+.section {
+  padding-bottom: 0;
+}
+
+.right-panel {
+  border-color: #9c9c9c;
+}
+
+.material-icons {
+  font-size: 15px;
+  color: white;
+}
+
+.edit-profile {
+  margin-left: 10px;
+}
+
+.location-icon {
+  padding-right: 8px;
+}

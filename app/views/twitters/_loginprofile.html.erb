@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <%= stylesheet_link_tag 'index.css' %>  
+</head>
+
+<body>
+    <div class="formulario">
+       <div class="contenedor">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+            <div class="div__input">
+                <div class="contraseña">
+                   <%= f.label :email %><br />
+                   <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form__input" %>
+                </div>
+                <% if devise_mapping.rememberable? %>
+                <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+                </div>
+                <% end %>
+            </div>
+           
+            <div class="div__input">
+                <div class="contraseña">
+                    <%= f.label :password %><br />
+                    <%= f.password_field :password, autocomplete: "current-password" , class:"form__input" %>
+                </div>
+                <div>
+                <%= link_to 'Forgot password?',  new_user_password_path%>
+               
+                </div>
+            </div>
+           
+            
+            
+
+            <div class="actions">
+                <%= f.submit "Log in", id:"btnlogin",class:"button" %>
+            </div>
+            <% end %>
+            
+            </div>
+    </div>
+    <div class="form_principal">
+        <img src="https://twitter-51c04.web.app/twitter.png" class="imagen" alt="Example">
+        <div id="centraltext">
+            <span>See what's hapenning in the world right now</span><br>
+        </div>
+        <div id="secundarytext">
+            <span>Join twitter today.</span><br>
+        </div>
+        <%= link_to 'Sign up',new_user_registration_path , class: "button button2"%> 
+        <%= link_to 'Log in',new_user_session_path , class: "button button1"%> 
+     
+    </div>
+    <div class="piedepagina">
+        <footer>
+            <span>About</span>
+            <span>Help Center</span>
+            <span>Terms</span>
+            <span>Privacy policy</span>
+            <span>Cookies</span>
+            <span>Ads info</span>
+            <span>Blog</span>
+            <span>Status</span>
+            <span>Jobs</span>
+            <span>Brand</span>
+            <span>Advertise</span>
+            <span>Marketing</span>
+            <span>Businesses</span>
+            <span>Developers</span>
+            <span>Directory</span>
+            <span>Settings</span>
+            <span>&copy; 2020 Twitter, Inc.</span>
+        </footer>
+    </div>
+</body>
+
+</html>
+    

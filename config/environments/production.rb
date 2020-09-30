@@ -89,8 +89,8 @@ Rails.application.configure do
     address:'smtp.gmail.com',
     port:'465',
     domain:'gmail.com',
-    user_name: 'twittercolrails@gmail.com',
-    password:  'deployment2020',
+    user_name: ENV['GMAIL_USERNAME'],
+    password:  ENV['GMAIL_PASSWORD'],
     authentication: 'plain',
     enable_starttls_auto: true
     }

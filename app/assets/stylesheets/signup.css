@@ -76,3 +76,11 @@ label {
   margin-top: auto;
   margin-bottom: auto;
 }
+.center {
+  text-align: center;
+}
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

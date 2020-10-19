@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
   get 'dashboard/index'
-  devise_for :users, :controllers => {  confirmations: 'confirmations', registrations: 'registrations' }
+ 
+  devise_for :users, :controllers => {  confirmations: 'confirmations', registrations: 'registrations' } 
+  resources :users, :only =>[:show]
+  match '/users',   to: 'users#index',   via: 'get'
+  match '/users/:username',     to: 'users#show',       via: 'get'
   resources :dashboard, only: [:index, :profile] 
   resources :twitters, path: 'home' 
   root 'twitters#index'

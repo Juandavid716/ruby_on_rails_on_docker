@@ -5,4 +5,9 @@ class User < ApplicationRecord
   validates :name, length: {maximum: 30}
   validates :username, length: {maximum: 15}
   has_many :twitters, dependent: :destroy
+
+  def to_param
+    username
+  end
+  
 end

@@ -165,6 +165,7 @@
 					<div>
 						  <%= link_to "Edit Perfil", edit_user_registration_path, class: "button is-info is-rounded edit-profile"%>
 					</div>
+					<%= render 'follow_button', :user => User.find_by_username(params[:id]) %>
 				</div>
 			</div>
 		</div>

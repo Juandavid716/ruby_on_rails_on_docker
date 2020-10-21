@@ -24,7 +24,7 @@
 
    
     <% @twitters.each do | twitter | %>
-    <% if current_user.following?(twitter.user) %>
+    <% if current_user.following?(twitter.user) || current_user.id == twitter.user.id %>
     <div class="box contenido">
       <article class="media">
           

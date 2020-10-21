@@ -155,12 +155,12 @@
 				</div>
 				<div class="level-item has-centered-text">
 					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Following <span class="has-text-grey-lighter has-text-weight-semibold">0</span></p>
+						<p class="subtitle is-6  has-text-grey-lighter">Siguiendo <span class="has-text-grey-lighter has-text-weight-semibold"><%= current_user.following.count %></span></p>
 					</div>
 				</div>
 					<div class="level-item has-centered-text">
 					<div>
-						<p class="subtitle is-6  has-text-grey-lighter">Followers <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
+						<p class="subtitle is-6  has-text-grey-lighter">Seguidores <span class="has-text-grey-lighter has-text-weight-semibold"><%= current_user.followers.count %></span></p>
 					</div>
 					<div>
 						  <%= link_to "Edit Perfil", edit_user_registration_path, class: "button is-info is-rounded edit-profile"%>

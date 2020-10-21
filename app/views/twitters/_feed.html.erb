@@ -21,20 +21,29 @@
       </div>
     </article>
     <% end %>
+
+   
     <% @twitters.each do | twitter | %>
+    <% if current_user.following?(twitter.user) %>
     <div class="box contenido">
       <article class="media">
+          
         <div class="media-left">
+         
           <figure class="image is-64x64">
             <%= gravatar_image_tag(twitter.user.email, size: 64, alt: twitter.user.name) %>
           </figure>
+           
         </div>
+     
         <div class="media-content">
+         
           <div class="content">
             <strong class="has-text-grey-lighter"><%= twitter.user.name %></strong><br />
             <small class="has-text-grey-lighter">@<%= twitter.user.username %></small><br/>
             <p class="has-text-grey-lighter"><%= twitter.twitter %></p>
           </div>
+        
           <% if user_signed_in? && current_user.id == twitter.user_id %>
           <nav class="level">
             <div class="level-left is-mobile">
@@ -48,6 +57,7 @@
         </div>
       </article>
     </div>
+    <% end %>
     <% end %>
   </div>
 </body>

@@ -162,9 +162,12 @@
 					<div>
 						<p class="subtitle is-6  has-text-grey-lighter">Followers <span class="has-text-grey-lighter has-text-weight-semibold">200</span></p>
 					</div>
+
+					<% if current_user.id == User.find_by_username(params[:id]).id %>
 					<div>
 						  <%= link_to "Edit Perfil", edit_user_registration_path, class: "button is-info is-rounded edit-profile"%>
 					</div>
+					 <% end %>
 					<%= render 'follow_button', :user => User.find_by_username(params[:id]) %>
 				</div>
 			</div>
@@ -172,7 +175,7 @@
 	</nav>
 
 <%@user.twitters.each  do | twitter | %>
-	<% if user_signed_in? && current_user.id == twitter.user_id %> 
+
 	<div class="box contenido">
    	  
   	<article class="media">
@@ -206,7 +209,7 @@
 	  </article>
 	  
   </div>
-  <% end %>
+
 <% end %>
 </div>
 			

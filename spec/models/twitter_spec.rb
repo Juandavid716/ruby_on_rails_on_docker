@@ -1,30 +1,18 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe Twitter, type: :model do
+RSpec.describe Twitter, type: :model do
 
-#   before(:each) do
-#     @twitter = Twitter.create!(twitter: "Hola soy el primer tweet", user_id: "1")
-#   end
+    # Test validaciones
+    context 'validation test' do
+        it 'comprobar si existe el texto de un tweet' do
+            twitter = Twitter.new(user_id:'1').save
+            expect(twitter).to eq(false)
+        end
+    end
 
-#   describe "creation" do
-#     it "Debe existir un tweet despues de aplicar el método creacion" do 
-#       expect(Twitter.all.count).to eq(1)
-#     end
-#   end
+    # Test asociaciones, comprobar si un tweet pertenece a un usuario
+    describe Twitter do
+        it { should belong_to(:user) }
+    end
 
-#   # describe "validations" do
-#   #     it "no puede existir un tweet sin contenido" do
-#   #       @twitter.twitter = nil
-#   #       expect(@twitter).to_not be_valid
-#   #     end
-      
-#   # end
-
-
-#   # describe 'length validations' do
-#   #   it "No debe permitir tuits con más de 280 caracteres"
-#   #     @twitter.twitter = "hola hola holaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholahola holaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholaholahola"
-#   #     expect(@twitter).to_not be_valid
-#   # end
-
-# end
+end

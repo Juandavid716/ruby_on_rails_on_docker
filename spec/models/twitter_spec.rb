@@ -13,6 +13,8 @@ RSpec.describe Twitter, type: :model do
     # Test asociaciones, comprobar si un tweet pertenece a un usuario
     describe Twitter do
         it { should belong_to(:user) }
+        it { is_expected.to validate_length_of(:twitter).is_at_most(280) }
     end
+
 
 end

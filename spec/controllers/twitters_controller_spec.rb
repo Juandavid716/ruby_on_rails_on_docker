@@ -22,6 +22,9 @@ RSpec.describe TwittersController, "#create"  do
           expect(Twitter.last.twitter).to eq("This is a test")
         end
 
+        it "should answer with 'completed' like response code" do
+          expect(response).to have_http_status(302)
+        end
     end
 end
 
@@ -42,6 +45,10 @@ RSpec.describe TwittersController, "#delete"  do
       it "should delete a twitter" do 
         expect(Twitter.all.size).to eq(0)
       end
+
+      it "should return server answer 'found'" do
+        expect(response).to have_http_status(:found)
+      end
       
   end
 end
@@ -55,13 +62,10 @@ RSpec.describe TwittersController, "#tweet's list"  do
 
       before do 
         sign_in user
-        post :index, params:  {
-
-        }   
       end
 
 
-      it "should listar tweets return OK like server answer" do
+      it "should answer with 'OK' like response code" do
         expect(response).to have_http_status(200)
       end
 

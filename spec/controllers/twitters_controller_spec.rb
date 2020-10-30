@@ -32,3 +32,46 @@ RSpec.describe TwittersController, "#create"  do
         
     end
 end
+
+RSpec.describe TwittersController, "#delete"  do
+  
+  context "when user is logged in" do
+      
+      let(:user) {create(:user)}
+      let(:twitter) {create(:twitter, user_id: user.id)}
+      before do 
+        sign_in user
+        
+        post :destroy, params: 
+        { 
+          id: twitter.id
+        }   
+      end
+
+
+      it "should delete a twitter" do 
+        expect(Twitter.all.size).to eq(0)
+      end
+
+      it "listar tweets" do 
+          expect(Twitter.all.order("created_at DESC"))
+      end
+      
+  end
+end
+
+RSpec.describe TwittersController, "#tweet's list"  do
+  
+  context "when user is logged in" do
+      
+      let(:user) {create(:user)}
+      let(:twitter) {create(:twitter, user_id: user.id)}
+      let(:twitter2) {create(:twitter, user_id: user.id)}
+
+
+      it "listar tweets" do 
+          expect(Twitter.all.order("created_at DESC"))
+      end
+      
+  end
+end

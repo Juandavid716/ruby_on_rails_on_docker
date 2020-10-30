@@ -169,6 +169,29 @@
 				</div>
 			</div>
 		</div>
+		<div class="panel-block">				
+			<div class="level is-mobile columns">
+				
+				<div class="level-item has-centered-text">
+					<% @relationships.each do | relationship | %>
+						<% if user_signed_in? && current_user.id == relationship.followed_id%>
+							<div>
+								<p class="subtitle is-6  has-text-grey-lighter"><span class="has-text-warning has-text-weight-semibold"> Seguidorid:<%= User.find_by_id(relationship.follower_id).name %></span></p><br>
+							</div>
+						<% end %>			
+					<% end %>
+				</div>
+				<div class="level-item has-centered-text">
+					<% @relationships.each do | relationship | %>
+						<% if user_signed_in? && current_user.id == relationship.follower_id%>
+							<div>
+								<p><span class="has-text-primary has-text-weight-semibold"> _Seguidoid:<%= User.find_by_id(relationship.followed_id).name %>_</span></p><br>
+							</div>
+						<% end %>		
+					<% end %>
+				</div>
+			</div>
+		</div>
 	</nav>
 <% @twitters.each  do | twitter | %>
 	<% if user_signed_in? && current_user.id == twitter.user_id %> 

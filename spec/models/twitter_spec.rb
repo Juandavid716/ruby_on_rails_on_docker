@@ -16,5 +16,4 @@ RSpec.describe Twitter, type: :model do
         it { is_expected.to validate_length_of(:twitter).is_at_most(280) }
     end
 
-
 end

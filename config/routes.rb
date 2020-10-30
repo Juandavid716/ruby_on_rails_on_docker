@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :twitters, path: 'home' 
   root 'twitters#index'
   get "profile" ,to: 'dashboard#profile'
+ 
   # #get 'sign_up', to: 'users/new'
   # get 'login', to: 'sessions#new'
   # get 'logout', to: 'sessions#destroy'
@@ -22,5 +23,4 @@ Rails.application.routes.draw do
   # resources :sessions, only: [:create]
   # resources :users, only: [:new, :create]
   #resources :tasks
-  
 end

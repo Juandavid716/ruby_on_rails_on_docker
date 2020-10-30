@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe RelationshipsController, "#create"  do
+  context "when a relationship is saved without params" do
+    it "should response with an error" do
+      expect{ Relationship.create! }.to raise_error(ActiveRecord::RecordInvalid)
+    end
+  end
+  
   context "when a user use function follow" do
     context "when user is logged in" do
       let(:user) {create(:user)}
@@ -11,7 +17,7 @@ RSpec.describe RelationshipsController, "#create"  do
         post :create, params:{ followed_id: user2.id}   
       end
 
-      it "should have a follower list" do
+      it "should have a relationship on database" do
         expect(Relationship.all).not_to be_empty
       end  
     end

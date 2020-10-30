@@ -6,6 +6,7 @@ class TwittersController < ApplicationController
   def index
     @twitters = Twitter.all.order("created_at DESC")
     @twitter = Twitter.new
+    @relationships = Relationship.all
   end
 
   # GET /twitters/1

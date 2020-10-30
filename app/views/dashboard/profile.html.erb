@@ -169,29 +169,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="panel-block">				
-			<div class="level is-mobile columns">
-				
-				<div class="level-item has-centered-text">
-					<% @relationships.each do | relationship | %>
-						<% if user_signed_in? && current_user.id == relationship.followed_id%>
-							<div>
-								<p class="subtitle is-6  has-text-grey-lighter"><span class="has-text-warning has-text-weight-semibold"> Seguidorid:<%= User.find_by_id(relationship.follower_id).name %></span></p><br>
-							</div>
-						<% end %>			
-					<% end %>
-				</div>
-				<div class="level-item has-centered-text">
-					<% @relationships.each do | relationship | %>
-						<% if user_signed_in? && current_user.id == relationship.follower_id%>
-							<div>
-								<p><span class="has-text-primary has-text-weight-semibold"> _Seguidoid:<%= User.find_by_id(relationship.followed_id).name %>_</span></p><br>
-							</div>
-						<% end %>		
-					<% end %>
-				</div>
-			</div>
-		</div>
+
 	</nav>
 <% @twitters.each  do | twitter | %>
 	<% if user_signed_in? && current_user.id == twitter.user_id %> 
@@ -234,12 +212,15 @@
 	<nav class="panel derecha">
 	<div class="panel-block" style="border-color: #9c9c9c">
 		<article class="media">
-			<p class="subtitle is-4 has-text-grey-lighter has-text-weight-bold">Who to follow</p>
+			<p class="subtitle is-4 has-text-grey-lighter has-text-weight-bold">Seguidores</p>
 		</article>
 	</div>
 	
-	
+		
+		<% @relationships.each do | relationship | %>
+		<% if user_signed_in? && current_user.id == relationship.followed_id && User.find_by_id(relationship.follower_id).id != current_user.id%>
 		<div class="panel-block" style="border-color: #9c9c9c">
+		
 			<article class="media">
 				<div class="media-left">
 					<figure class="image is-32x32 ">
@@ -250,49 +231,56 @@
 				<div class="media-content">
 					<div class="content">
 						<p class="has-text-grey-lighter">
-							<strong class="has-text-grey-lighter">Real Madrid</strong>
-							<small>@realmadrid</small>
+						
+						
+								<strong class="has-text-grey-lighter"><%= User.find_by_id(relationship.follower_id).name %></strong>
+								<small>@<%= User.find_by_id(relationship.follower_id).username %></small>
+							
+				
+						
 						</p>
 					</div>
 				</div>
 			</article>
 		</div>
-		<div class="panel-block" style="border-color: #9c9c9c">
-		<article class="media">
-			<div class="media-left">
-				<figure class="image is-32x32 ">
-					<img src="https://pbs.twimg.com/profile_images/1291131477162434563/7_CvM9U6_400x400.jpg"> 
-					
-				</figure>
-			</div>
-			<div class="media-content">
-				<div class="content">
-					<p class="has-text-grey-lighter">
-						<strong class="has-text-grey-lighter">FC Barcelona</strong>
-						<small>@FCBarcelona</small>
-					</p>
-				</div>
-			</div>
-		</article>
-	</div>
-		<div class="panel-block" >
-		<article class="media">
-			<div class="media-left">
-				<figure class="image is-32x32">
-					<img src="https://pbs.twimg.com/profile_images/1157313327867092993/a09TxL_1_400x400.jpg">
-				</figure>
-			</div>
-			<div class="media-content">
-				<div class="content">
-					<p class=" has-text-grey-lighter">
-						<strong class=" has-text-grey-lighter">Cristiano Ronaldo</strong>
-						<small>@Cristiano</small>
-					</p>
-				</div>
-			</div>
-		</article>
-	</div>
+			<% end %>	
+			<% end %>
+		
 	</nav>
+	<div class="panel-block" style="border-color: #9c9c9c">
+		<article class="media">
+			<p class="subtitle is-4 has-text-grey-lighter has-text-weight-bold">Siguiendo</p>
+		</article>
+	</div>
+		
+		<% @relationships.each do | relationship | %>
+		<% if user_signed_in? && User.find_by_id(relationship.follower_id).id == current_user.id%>
+		<div class="panel-block" style="border-color: #9c9c9c">
+		
+			<article class="media">
+				<div class="media-left">
+					<figure class="image is-32x32 ">
+						<img src="https://pbs.twimg.com/profile_images/1284197749030887429/7n6w-Urk_400x400.jpg">
+						
+					</figure>
+				</div>
+				<div class="media-content">
+					<div class="content">
+						<p class="has-text-grey-lighter">
+						
+						
+								<strong class="has-text-grey-lighter"><%= User.find_by_id(relationship.followed_id).username%></strong>
+								<small>@<%= User.find_by_id(relationship.followed_id).username %></small>
+							
+				
+						
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+			<% end %>	
+			<% end %>
 </div>
 
 

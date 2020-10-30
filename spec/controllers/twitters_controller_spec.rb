@@ -22,14 +22,6 @@ RSpec.describe TwittersController, "#create"  do
           expect(Twitter.last.twitter).to eq("This is a test")
         end
 
-        it "should delete a twitter" do 
-          expect(Twitter.last.delete)
-        end
-
-        it "listar tweets" do 
-            expect(Twitter.all.order("created_at DESC"))
-        end
-        
     end
 end
 
@@ -41,37 +33,40 @@ RSpec.describe TwittersController, "#delete"  do
       let(:twitter) {create(:twitter, user_id: user.id)}
       before do 
         sign_in user
-        
         post :destroy, params: 
         { 
           id: twitter.id
         }   
       end
 
-
       it "should delete a twitter" do 
         expect(Twitter.all.size).to eq(0)
-      end
-
-      it "listar tweets" do 
-          expect(Twitter.all.order("created_at DESC"))
       end
       
   end
 end
 
 RSpec.describe TwittersController, "#tweet's list"  do
-  
   context "when user is logged in" do
-      
       let(:user) {create(:user)}
       let(:twitter) {create(:twitter, user_id: user.id)}
       let(:twitter2) {create(:twitter, user_id: user.id)}
+      let(:twitter3) {create(:twitter, user_id: user.id)}
 
+      before do 
+        sign_in user
+        post :index, params:  {
 
-      it "listar tweets" do 
-          expect(Twitter.all.order("created_at DESC"))
+        }   
       end
-      
+
+
+      it "should listar tweets return OK like server answer" do
+        expect(response).to have_http_status(200)
+      end
+
+      it "list tweets exists " do
+   #     expect("home").to have_link("Start a project", href: '/start.html')
+      end
   end
 end

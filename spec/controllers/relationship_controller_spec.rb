@@ -86,23 +86,3 @@ RSpec.describe RelationshipsController, "#followerslist"  do
     end
   end
 end
-
-RSpec.describe RelationshipsController, "#delete"  do
-  context "when a user use function unfollow" do
-    context "when user is logged in" do
-      let(:user) {create(:user)}
-      let(:user2) {create(:user)}
-      before do 
-        sign_in user
-        #user.active_relationships.create(followed_id: user2.id)
-        post :create, params:{ followed_id: user2.id}
-        delete :destroy, params:{ id: user.id}  
-      end
-
-      it "should not have a relationship on database" do
-        expect(Relationship.all).to be_empty
-      end 
-    end
-  end
-end
-

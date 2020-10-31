@@ -2,9 +2,13 @@ require 'rails_helper'
 
 RSpec.describe TwittersController, "#create"  do
     context " When a twitter is created" do
-    it "Should re-render the home page" do
+      it "Should re-render the home page" do
         expect {Twitter.create!}.to raise_error(ActiveRecord::RecordInvalid)
-    end
+      end
+
+      it "should answer with 'completed' like response code" do
+        expect(response).to have_http_status(:success)
+      end
     end
 
     context "when user is logged in" do
@@ -64,13 +68,12 @@ RSpec.describe TwittersController, "#tweet's list"  do
         sign_in user
       end
 
-
       it "should answer with 'OK' like response code" do
         expect(response).to have_http_status(200)
       end
 
       it "list tweets exists " do
-   #     expect("home").to have_link("Start a project", href: '/start.html')
+   #     expect("home").to have_link("current_user.name", href: '/index.html')
       end
   end
 end

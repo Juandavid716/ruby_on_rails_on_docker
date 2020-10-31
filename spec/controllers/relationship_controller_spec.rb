@@ -55,3 +55,34 @@ RSpec.describe RelationshipsController, "#followerslist"  do
     end
   end
 end
+
+RSpec.describe RelationshipsController, "#followerslist"  do
+  context "when the followers list exists" do
+    context "when user is logged in" do
+      let(:user) {create(:user)}
+      let(:user2) {create(:user)}
+      let(:user3) {create(:user)}
+      let(:user4) {create(:user)}
+      before do 
+        sign_in user2
+        #user.active_relationships.create(followed_id: user2.id)
+        post :create, params:{ followed_id: user.id}
+        sign_out user2
+
+        sign_in user2
+        post :create, params:{ followed_id: user3.id}
+        sign_out user2
+
+        sign_in user2
+        post :create, params:{ followed_id: user4.id}
+        sign_out user2
+      end
+      it "should following list exist" do
+        #expect(Relationship.where(followed_id: "4").all.size).to eq(3)
+        expect(Relationship.find_by followed_id: 2).not_to be(nil)
+        #expect('index').to have_content('@user3')
+      end 
+      
+    end
+  end
+end

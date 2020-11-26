@@ -11,11 +11,7 @@ development:
   timeout: 5000
   database: db/development.sqlite3
 
-development_sec:
 
-  database: pusher-chat_development # add this line if it isn't already there
-  username: database_user # add this line
-  password: user_password # add this line
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.

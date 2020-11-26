@@ -1,5 +1,6 @@
 
 class UsersController < ApplicationController
+  include ActiveModel::Model
   # skip_before_action :require_valid_user!
   # before_action :reset_session
   def index
@@ -10,6 +11,10 @@ class UsersController < ApplicationController
     @user = User.find_by_username(params[:id])
   end
 
+  def search
+    @users_search = User.where("name LIKE ?", "%" + params[:q] + "%")
+    #@usuarios = User.search(params[:search])
+  end
   # def create
   #   @user = User.new(user_params)
 

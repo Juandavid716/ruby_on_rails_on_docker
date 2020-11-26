@@ -8,6 +8,10 @@
   border-color: #38444d;
 }
 
+.twitterimage{
+  max-width: 100%
+}
+
 .scrolling {
   height: 88vh;
   overflow-y: scroll;

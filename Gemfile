@@ -7,6 +7,15 @@ ruby '2.5.8'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use sqlite3 as the database for Active Record
 
+
+
+#custom-gens
+gem 'popper_js'
+gem 'pusher'
+gem 'figaro'
+
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

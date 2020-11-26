@@ -5,6 +5,12 @@
 </head>
 <body>
   <div class="column is-5 scrolling">
+
+    <form class="form-inline" action="/search">
+      <input name="q" class="form-control" type="text" placeholder="Search" aria-labial="Search">
+      <button  class="btn btn-onlione-success" type="submit">Search</button> 
+    </form>
+
     <% if user_signed_in? %>
     <nav class="panel" id="infoprofile">
     <article class="media-box titulo">
@@ -22,7 +28,9 @@
     </article>
     <% end %>
 
-   
+
+
+       
     <% @twitters.each do | twitter | %>
     <% if current_user.following?(twitter.user) || current_user.id == twitter.user.id %>
     <div class="box contenido">
@@ -43,7 +51,12 @@
             <small class="has-text-grey-lighter">@<%= twitter.user.username %></small><br/>
             <p class="has-text-grey-lighter"><%= twitter.twitter %></p>
           </div>
-        
+
+          <div class="twitterimage">
+            <%= image_tag twitter.image%>
+          <div>
+
+
           <% if user_signed_in? && current_user.id == twitter.user_id %>
           <nav class="level">
             <div class="level-left is-mobile">
